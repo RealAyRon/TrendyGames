@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+		
+		.header {
+      background-color: #171a21;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      padding: 10px;
+    }
+
+    .navbar a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      background-color: #444; /* Solid color for the button */
+    }
+
+    .navbar a:hover {
+      background-color: #444; /* Keep the button color unchanged */
+      color: white;
+    }
+
+    /* Home icon */
+    .home-icon:before {
+      content: "\f015"; /* Unicode for home icon */
+      font-family: "Font Awesome 5 Free";
+      margin-right: 5px;
+    }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: calc(100% - 22px); /* Adjusting for padding and border */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%; /* Make the button fill the width of the container */
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #response {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Discover Trending Games</h1>
+    <p>Explore and enjoy the most played selection of games on our platform</p>
+  </div>
+  <div class="navbar">
+    <a href="ecom2.html" class="home-icon">Home</a> <!-- Add home icon class -->
+  </div>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="response"></div>
+    </div>
+
+    <script>
+       document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Get form data
+    var formData = new FormData(this);
+
+    // Send form data via AJAX
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'contact.php', true);
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            document.getElementById('response').innerText = xhr.responseText;
+        } else {
+            document.getElementById('response').innerText = 'Error: ' + xhr.statusText;
+        }
+    };
+    xhr.onerror = function() {
+        document.getElementById('response').innerText = 'Request failed';
+    };
+    xhr.send(formData);
+});
+
+    </script>
+</body>
+</html>

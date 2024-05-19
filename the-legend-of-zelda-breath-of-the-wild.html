@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f3f3;
+    }
+	
+    .header {
+      background-color: #171a21;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      padding: 10px;
+    }
+
+    .navbar a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      background-color: #444; /* Solid color for the button */
+    }
+
+    .navbar a:hover {
+      background-color: #444; /* Keep the button color unchanged */
+      color: white;
+    }
+
+    /* Home icon */
+    .home-icon:before {
+      content: "\f015"; /* Unicode for home icon */
+      font-family: "Font Awesome 5 Free";
+      margin-right: 5px;
+    }
+
+    .game-info {
+  max-width: 1000px;
+  margin: 50px auto;
+  background-color: #000; /* Change the background color to black */
+  color: #fff; /* Change the text color to white */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ccc;
+}
+
+#game-description::before {
+  content: "";
+  display: block;
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+h1,
+p {
+  color: #fff; /* Change the text color of headings and paragraphs */
+}
+
+#game-pictures {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+#game-pictures img {
+  max-width: 300px; /* Set maximum width for images */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add space between images */
+  display: inline-block; /* Make images display in a row */
+}
+
+
+#game-icon {
+  max-width: 200px;
+  display: block;
+  margin: 20px auto;
+  margin-left: 50px;
+  border: 2px solid #333;
+}
+
+    #game-description::before {
+  content: "";
+  display: block;
+  border-top: 5px solid #ccc; /* Add a 1px solid border at the top with color #ccc */
+  margin-bottom: 20px; /* Add some spacing between the line and the text */
+}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Discover Trending Games</h1>
+    <p>Explore and enjoy the most played selection of games on our platform</p>
+  </div>
+  <div class="navbar">
+    <a href="ecom2.html" class="home-icon">Home</a> <!-- Add home icon class -->
+  </div>
+  <div class="game-info">
+      <img id="game-icon" src="https://media.vgm.io/releases/87/5978/5978-1595285452.png" alt="Game Icon">
+    <h1 id="game-name">The Legend of Zelda: Breath of the Wild</h1>
+    <div id="game-pictures">
+        <img src="https://i.makeagif.com/media/2-10-2017/8g37UP.gif" alt="Game Picture 1">
+		<img src="https://i.pinimg.com/originals/57/25/5f/57255f999c18fa4fd26f8e5a5c6649da.gif" alt="Game Picture 3">
+        <img src="https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2016/07/19/1331806959481_2/classic-link-always-blowing-something-up" alt="Game Picture 2">
+        <img src="https://assets1.ignimgs.com/thumbs/userUploaded/2016/6/14/snapszelda-breath-of-the-wild-gameplay-about-e3-2016-on-ign6x-1465925829132.jpg" alt="Game Picture 3">
+		<img src="https://i.ytimg.com/vi/hCrjKJ8adPw/maxresdefault.jpg" alt="Game Picture 3">
+    </div>
+    <p id="game-description">"Breath of the Wild" invites players into the expansive world of Hyrule, where they guide Link in a quest to defeat Calamity Ganon. With its open-world design, players explore diverse landscapes, solve puzzles, and engage in thrilling combat encounters. The game's innovative mechanics, stunning visuals, and compelling narrative make it a standout entry in the "Legend of Zelda" series.</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f3f3;
+    }
+	
+    .header {
+      background-color: #171a21;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      padding: 10px;
+    }
+
+    .navbar a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      background-color: #444; /* Solid color for the button */
+    }
+
+    .navbar a:hover {
+      background-color: #444; /* Keep the button color unchanged */
+      color: white;
+    }
+
+    /* Home icon */
+    .home-icon:before {
+      content: "\f015"; /* Unicode for home icon */
+      font-family: "Font Awesome 5 Free";
+      margin-right: 5px;
+    }
+
+    .game-info {
+  max-width: 1000px;
+  margin: 50px auto;
+  background-color: #000; /* Change the background color to black */
+  color: #fff; /* Change the text color to white */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ccc;
+}
+
+#game-description::before {
+  content: "";
+  display: block;
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+h1,
+p {
+  color: #fff; /* Change the text color of headings and paragraphs */
+}
+
+#game-pictures {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+#game-pictures img {
+  max-width: 300px; /* Set maximum width for images */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add space between images */
+  display: inline-block; /* Make images display in a row */
+}
+
+
+#game-icon {
+  max-width: 200px;
+  display: block;
+  margin: 20px auto;
+  margin-left: 50px;
+  border: 2px solid #333;
+}
+
+    #game-description::before {
+  content: "";
+  display: block;
+  border-top: 5px solid #ccc; /* Add a 1px solid border at the top with color #ccc */
+  margin-bottom: 20px; /* Add some spacing between the line and the text */
+}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Discover Trending Games</h1>
+    <p>Explore and enjoy the most played selection of games on our platform</p>
+  </div>
+  <div class="navbar">
+    <a href="ecom2.html" class="home-icon">Home</a> <!-- Add home icon class -->
+  </div>
+  <div class="game-info">
+      <img id="game-icon" src="https://upload.wikimedia.org/wikipedia/en/b/bf/The_Evil_Within_2_cover_art.jpg" alt="Game Icon">
+    <h1 id="game-name">The Evil Within 2</h1>
+    <div id="game-pictures">
+        <img src="https://assets.vg247.com/current//2017/07/evil_within_2_gif_1.gif" alt="Game Picture 1">
+		<img src="https://images.ctfassets.net/rporu91m20dc/6lUZSHdpDyW8s8KuOyK4qG/ee4735b79a557c98d87f2135479f50a0/TEW2_Anima_GIF_3.gif" alt="Game Picture 3">
+        <img src="https://www.pcgamesn.com/wp-content/sites/pcgamesn/legacy/the_evil_within_debug.jpg" alt="Game Picture 2">
+        <img src="https://i.ytimg.com/vi/-xZ9_ZXMSkY/maxresdefault.jpg" alt="Game Picture 3">
+		<img src="https://www.stripes.com/living/entertainment/video_games/494132.jpg/alternates/LANDSCAPE_480/The%20Evil%20Within%202%20brings%20solid%20gameplay%20a%20fanta" alt="Game Picture 3">
+    </div>
+    <p id="game-description">"Evil Within 2" plunges players into a twisted realm of horror and despair, where they must confront their darkest fears to save their daughter from the clutches of a malevolent force. As detective Sebastian Castellanos, players navigate through nightmarish landscapes, unraveling the mysteries of STEM, a virtual world gone awry.
+
+With its immersive atmosphere, intense survival horror gameplay, and mind-bending narrative, "Evil Within 2" delivers a harrowing experience that keeps players on the edge of their seats. From grotesque monsters to psychological terror, every moment is fraught with tension as players fight to survive and uncover the truth behind the nightmare.</p>
+  </div>
+</body>
+</html>

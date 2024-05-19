@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f3f3;
+    }
+	
+    .header {
+      background-color: #171a21;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      padding: 10px;
+    }
+
+    .navbar a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      background-color: #444; /* Solid color for the button */
+    }
+
+    .navbar a:hover {
+      background-color: #444; /* Keep the button color unchanged */
+      color: white;
+    }
+
+    /* Home icon */
+    .home-icon:before {
+      content: "\f015"; /* Unicode for home icon */
+      font-family: "Font Awesome 5 Free";
+      margin-right: 5px;
+    }
+
+    .game-info {
+  max-width: 1000px;
+  margin: 50px auto;
+  background-color: #000; /* Change the background color to black */
+  color: #fff; /* Change the text color to white */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ccc;
+}
+
+#game-description::before {
+  content: "";
+  display: block;
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+h1,
+p {
+  color: #fff; /* Change the text color of headings and paragraphs */
+}
+
+#game-pictures {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+#game-pictures img {
+  max-width: 300px; /* Set maximum width for images */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add space between images */
+  display: inline-block; /* Make images display in a row */
+}
+
+
+#game-icon {
+  max-width: 200px;
+  display: block;
+  margin: 20px auto;
+  margin-left: 50px;
+  border: 2px solid #333;
+}
+
+    #game-description::before {
+  content: "";
+  display: block;
+  border-top: 5px solid #ccc; /* Add a 1px solid border at the top with color #ccc */
+  margin-bottom: 20px; /* Add some spacing between the line and the text */
+}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Discover Trending Games</h1>
+    <p>Explore and enjoy the most played selection of games on our platform</p>
+  </div>
+  <div class="navbar">
+    <a href="ecom2.html" class="home-icon">Home</a> <!-- Add home icon class -->
+  </div>
+  <div class="game-info">
+      <img id="game-icon" src="https://static.wikia.nocookie.net/logopedia/images/c/c7/Gold_EN_boxart.png/revision/latest?cb=20151216121325" alt="Game Icon">
+    <h1 id="game-name">Pokemon Gold</h1>
+    <div id="game-pictures">
+        <img src="https://i.pinimg.com/originals/57/13/ed/5713ed249882edb58454e869904eb845.gif" alt="Game Picture 1">
+		<img src="https://qph.cf2.quoracdn.net/main-qimg-85ddc8f10ef61c559486d4cdec1b6e69" alt="Game Picture 3">
+        <img src="https://cdn.vox-cdn.com/thumbor/VqPFpj1KyEI1641Z8ae4MUZ4iEU=/8x0:961x540/1400x788/filters:focal(405x194:557x346):format(png)/cdn.vox-cdn.com/uploads/chorus_image/image/55142125/Screen_Shot_2017_06_07_at_1.36.13_PM.0.png" alt="Game Picture 2">
+        <img src="data:image/jpeg;base64,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" alt="Game Picture 3">
+		<img src="https://cdn.vox-cdn.com/thumbor/S3Ka42mz7a-AITTOZRTAn0_sgEE=/0x0:960x863/1200x0/filters:focal(0x0:960x863):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/8647197/Screen_Shot_2017_06_07_at_1.41.19_PM.png" alt="Game Picture 3">
+    </div>
+    <p id="game-description">"Pokemon Gold" takes players on a nostalgic journey through the Johto region, where they embark on a quest to become the ultimate Pokemon Trainer. Set years after the events of the original Pokemon games, Gold introduces new features like day and night cycles, breeding, and the ability to explore both Johto and the neighboring Kanto region. With iconic Pokemon to catch, challenging gyms to conquer, and a sinister new villainous team to thwart, "Pokemon Gold" offers a timeless adventure filled with excitement and discovery.</p>
+  </div>
+</body>
+</html>

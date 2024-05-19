@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f3f3;
+    }
+	
+    .header {
+      background-color: #171a21;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      padding: 10px;
+    }
+
+    .navbar a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      background-color: #444; /* Solid color for the button */
+    }
+
+    .navbar a:hover {
+      background-color: #444; /* Keep the button color unchanged */
+      color: white;
+    }
+
+    /* Home icon */
+    .home-icon:before {
+      content: "\f015"; /* Unicode for home icon */
+      font-family: "Font Awesome 5 Free";
+      margin-right: 5px;
+    }
+
+    .game-info {
+  max-width: 1000px;
+  margin: 50px auto;
+  background-color: #000; /* Change the background color to black */
+  color: #fff; /* Change the text color to white */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ccc;
+}
+
+#game-description::before {
+  content: "";
+  display: block;
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+h1,
+p {
+  color: #fff; /* Change the text color of headings and paragraphs */
+}
+
+#game-pictures {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+#game-pictures img {
+  max-width: 300px; /* Set maximum width for images */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add space between images */
+  display: inline-block; /* Make images display in a row */
+}
+
+
+#game-icon {
+  max-width: 200px;
+  display: block;
+  margin: 20px auto;
+  margin-left: 50px;
+  border: 2px solid #333;
+}
+
+    #game-description::before {
+  content: "";
+  display: block;
+  border-top: 5px solid #ccc; /* Add a 1px solid border at the top with color #ccc */
+  margin-bottom: 20px; /* Add some spacing between the line and the text */
+}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Discover Trending Games</h1>
+    <p>Explore and enjoy the most played selection of games on our platform</p>
+  </div>
+  <div class="navbar">
+    <a href="ecom2.html" class="home-icon">Home</a> <!-- Add home icon class -->
+  </div>
+  <div class="game-info">
+      <img id="game-icon" src="https://static.wikia.nocookie.net/spidermanps4/images/9/93/Miles_Morales_front_cover_%28US%29.png/revision/latest?cb=20201002201551" alt="Game Icon">
+    <h1 id="game-name">Marvel's Spider-Man: Miles Morales</h1>
+    <div id="game-pictures">
+        <img src="https://i1.wp.com/kakuchopurei.com/wp-content/uploads/2020/06/spidermanMM_moves.gif?resize=600%2C338&ssl=1" alt="Game Picture 1">
+		<img src="https://media3.giphy.com/media/iswysSNmNbqldSDGkB/giphy.gif?cid=6c09b952wfnpgpzh6lv9fvr4z5wqsgd4o89n41n1q4vc6y5u&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Game Picture 3">
+        <img src="https://cdn.vox-cdn.com/uploads/chorus_asset/file/22008512/Marvel_s_Spider_Man__Miles_Morales_20201102154023.jpg" alt="Game Picture 2">
+        <img src="https://cdn.arstechnica.net/wp-content/uploads/2020/11/Marvels-Spider-Man_-Miles-Morales_20201102224623-640x360.jpg" alt="Game Picture 3">
+		<img src="https://cdn.mos.cms.futurecdn.net/QNFd98YCrLViKcJiNtwa39-1200-80.jpg" alt="Game Picture 3">
+    </div>
+    <p id="game-description">"Spider-Man: Miles Morales" swings players into the shoes of the beloved hero as he navigates the bustling streets of New York City. Set in the aftermath of the original game, Miles Morales grapples with newfound responsibilities and powers while facing off against a new threat to his beloved city.
+
+With its thrilling traversal mechanics, dynamic combat system, and heartfelt narrative, "Spider-Man: Miles Morales" offers an exhilarating adventure that celebrates the legacy of Spider-Man while forging a path uniquely its own. As players swing, fight, and explore their way through the vibrant neighborhoods of Harlem and beyond, they'll uncover the true meaning of heroism and the power of community.</p>
+  </div>
+</body>
+</html>

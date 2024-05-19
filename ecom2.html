@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Online Games</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #171a21;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .games {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .game {
+            background-color: #2c2f33;
+            color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        .game:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        .game img {
+    max-width: 230px; /* Adjust this value as needed */
+    max-height: 230px; /* Adjust this value as needed */
+    width: auto;
+    height: auto;
+    margin: auto; /* Center the image horizontally and vertically */
+    display: block; /* Ensures the margin: auto; works properly */
+}
+
+        .game h3 {
+            margin: 10px 0;
+        }
+        .game p {
+            margin: 10px 0;
+        }
+        .game button {
+            margin: 10px auto;
+            display: block;
+            width: 80%;
+            max-width: 200px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .game button:hover {
+            background-color: #45a049;
+        }
+        .game .details {
+            text-decoration: underline;
+            cursor: pointer;
+            color: #4caf50;
+            margin-top: auto;
+        }
+        .game .details:hover {
+            color: #45a049;
+        }
+        .cart {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 1;
+        }
+        .cart span {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 5px;
+            font-size: 12px;
+        }
+        .cart:hover .cart-content {
+            display: block;
+        }
+        .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.cart-item button {
+    margin-left: auto; /* Aligns the button to the right */
+}
+
+        .checkout {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .checkout button {
+            padding: 15px 40px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .checkout button:hover {
+            background-color: #45a049;
+        }
+        .payment-methods {
+            margin-top: 20px;
+        }
+        .payment-methods label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            padding: 10px;
+        }
+        .navbar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .dropdown {
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 20px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #ddd;
+            color: black;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 300px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            animation: animateTop 0.4s;
+        }
+        @keyframes animateTop {
+            from {top:-300px; opacity:0} 
+            to {top:0; opacity:1}
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label, input, button {
+            margin: 10px 0;
+        }
+        .login-container {
+            margin-left: auto;
+        }
+        .notification {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4caf50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+        .notification.show {
+            display: block;
+        }
+		.hidden {
+    display: none;
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Discover Trending Games</h1>
+        <p>Explore and enjoy the most played selection of games on our platform</p>
+        <div class="cart" onclick="openCheckout()">
+            <span id="cart-count">0</span>
+            <img src="https://img.icons8.com/material/48/ffffff/shopping-cart--v1.png" style="width: 36px; height: 36px;"/>
+        </div>
+    </div>
+    <div class="navbar">
+        <a href="#" onclick="showAllGames()">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Categories</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="filterGames('action')">Action</a>
+                <a href="#" onclick="filterGames('horror')">Horror</a>
+                <a href="#" onclick="filterGames('adventure')">Adventure</a>
+                <a href="#" onclick="filterGames('rpg')">RPG</a>
+            </div>
+        </div>
+        <a href="#" id="loginBtn">Login</a>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container" id="gameContainer">
+        <h2 id="categoryTitle">Featured Games</h2>
+        <div class="games" id="games">
+            <div class="game" data-category="action">
+    <img src="https://i.pinimg.com/736x/f1/6f/02/f16f0224fc1100a9e2a9ef8b5734781d.jpg" alt="Game 1">
+    <h3>Marvel's Spider-Man 2</h3>
+	<p>₱3,490</p>
+    <button onclick="addToCart('Marvels Spider-Man 2')">Add to Cart</button>
+    <a href="marvels-spider-man-2.html" style="color: green;">View Details</a>
+</div>
+
+<div class="game" data-category="horror">
+    <img src="https://m.media-amazon.com/images/M/MV5BOTVlYWVmOTYtNGI3OS00YWUyLTlkZDItMDA4ZWZiNjVmZmZmXkEyXkFqcGdeQXVyMjM5NzU3OTM@._V1_.jpg" alt="Game 2">
+    <h3>Until Dawn</h3>
+	<p>₱650</p>
+    <button onclick="addToCart('Until Dawn')">Add to Cart</button>
+    <a href="until-dawn.html" style="color: green;">View Details</a>
+</div>
+
+<div class="game" data-category="adventure">
+    <img src="https://images-cdn.ubuy.co.in/635238435dc762094c218093-genshin-impact-poster-gaming-poster.jpg" alt="Game 3">
+    <h3>Genshin Impact</h3>
+	<p>₱200</p>
+    <button onclick="addToCart('Genshin Impact')">Add to Cart</button>
+    <a href="genshin-impact.html" style="color: green;">View Details</a>
+</div>
+
+<div class="game" data-category="rpg">
+    <img src="https://m.media-amazon.com/images/M/MV5BNzQ3ZGFiYWEtYWU3Yy00NDFjLTgyNmQtN2MzNDhjNDJlNTZhXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg" alt="Game 4">
+    <h3>Pokemon Gold</h3>
+	<p>₱400</p>
+    <button onclick="addToCart('Pokemon Gold')">Add to Cart</button>
+    <a href="pokemon-gold.html" style="color: green;">View Details</a>
+</div>
+
+<div class="game" data-category="action">
+    <img src="https://i.ebayimg.com/images/g/oGwAAOSw5kBfAE6p/s-l1200.webp" alt="Game 1">
+    <h3>Cyberpunk 2077</h3>
+	<p>₱800</p>
+    <button onclick="addToCart('Cyberpunk 2077')">Add to Cart</button>
+    <a href="cyberpunk-2077.html" style="color: green;">View Details</a>
+</div>
+
+<div class="game" data-category="horror">
+    <img src="https://i.ebayimg.com/images/g/ZWoAAOSw~xJkFJqJ/s-l1200.webp" alt="Game 2">
+    <h3>Resident Evil Village</h3>
+	<p>₱1,900</p>
+    <button onclick="addToCart('Resident Evil Village')">Add to Cart</button>
+    <a href="resident-evil-village.html" style="color: green;">View Details</a>
+</div>
+
+<div class="game" data-category="adventure">
+    <img src="https://m.media-amazon.com/images/I/61gEETe5-wL.jpg" alt="Game 3">
+    <h3>The Legend of Zelda: Breath of the Wild</h3>
+	<p>₱999</p>
+    <button onclick="addToCart('The Legend of Zelda: Breath of the Wild')">Add to Cart</button>
+    <a href="the-legend-of-zelda-breath-of-the-wild.html" style="color: green;">View Details</a>
+</div>
+
+<div class="game" data-category="rpg">
+    <img src="https://i.ebayimg.com/images/g/rAgAAOSwvoZko1om/s-l400.jpg" alt="Game 4">
+    <h3>Dragon Age: Inquisition</h3>
+	<p>₱450</p>
+    <button onclick="addToCart('Dragon Age: Inquisition')">Add to Cart</button>
+    <a href="dragon-age-inquisition.html" style="color: green;">View Details</a>
+</div>
+
+<div class="game" data-category="action">
+    <img src="https://i.ebayimg.com/images/g/f04AAOSwnolfVn8y/s-l1600.png" alt="Game 1">
+    <h3>Marvel's Spider-Man: Miles Morales</h3>
+	<p>₱1,9999</p>
+    <button onclick="addToCart('Marvels Spider-Man: Miles Morales')">Add to Cart</button>
+    <a href="marvels-spider-man-miles-morales.html" style="color: green;">View Details</a>
+</div>
+
+<div class="game" data-category="horror">
+    <img src="https://i.ebayimg.com/images/g/KLMAAOSw9cxlBnsl/s-l1600.jpg" alt="Game 2">
+    <h3>The Evil Within 2</h3>
+	<p>₱500</p>
+    <button onclick="addToCart('The Evil Within 2')">Add to Cart</button>
+    <a href="the-evil-within-2.html" style="color: green;">View Details</a>
+</div>
+        </div>
+    </div>
+    
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="checkoutClose">&times;</span>
+            <h2>Checkout</h2>
+            <div class="cart-content" id="checkoutCartContent"></div>
+            <!-- Within the checkout modal -->
+<div class="checkout">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" required>
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="text" id="phoneNumber" required>
+    <label for="homeAddress">Home Address:</label>
+    <input type="text" id="homeAddress" required>
+    <button onclick="proceedToPayment()">Proceed to Payment</button>
+    <button onclick="clearCart()">Clear Cart</button>
+</div>
+
+<div class="payment-methods" id="paymentMethods" style="display: none;">
+    <label><input type="radio" name="payment" value="credit"> Credit Card</label>
+    <label><input type="radio" name="payment" value="paypal"> PayPal</label>
+    <label><input type="radio" name="payment" value="gcash"> GCash</label>
+    <button onclick="completePurchase()">Complete Purchase</button>
+</div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">Item added to cart</div>
+ <div style="text-align: center; margin-top: 20px;">
+        <a href="contactus.html" style="color: #4caf50; text-decoration: underline;">Contact Us</a>
+    </div>
+    <script>
+	   const checkoutModal = document.getElementById('checkoutModal');
+       const checkoutClose = document.getElementById('checkoutClose');
+
+       checkoutClose.onclick = function() {
+       checkoutModal.style.display = 'none';
+        }
+
+        const loginBtn = document.getElementById('loginBtn');
+        const loginModal = document.getElementById('loginModal');
+        const span = document.getElementsByClassName('close')[0];
+        const notification = document.getElementById('notification');
+
+        loginBtn.onclick = function() {
+            loginModal.style.display = 'block';
+        }
+
+        span.onclick = function() {
+            loginModal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == loginModal) {
+                loginModal.style.display = 'none';
+            }
+            if (event.target == checkoutModal) {
+                checkoutModal.style.display = 'none';
+            }
+        }
+        // Define the games array with names and prices
+let cart = [];
+let games = [
+    { name: 'Marvels Spider-Man 2', price: 3490 },
+    { name: 'Until Dawn', price: 650 },
+    { name: 'Genshin Impact', price: 200 },
+    { name: 'Pokemon Gold', price: 400 },
+    { name: 'Cyberpunk 2077', price: 800 },
+    { name: 'Resident Evil Village', price: 1900 },
+    { name: 'The Legend of Zelda: Breath of the Wild', price: 999 },
+    { name: 'Dragon Age: Inquisition', price: 450 },
+    { name: 'Marvels Spider-Man: Miles Morales', price: 1999 },
+    { name: 'The Evil Within 2', price: 500 },
+    { name: 'Uncharted 4: A Thiefs End', price: 650 },
+    { name: 'Dark Souls III', price: 980 },
+    { name: 'Marvels Spider-Man', price: 1499 },
+    { name: 'Phasmophobia', price: 750 },
+    { name: 'The Witcher 3: Wild Hunt', price: 800 },
+    { name: 'Persona 5', price: 850 },
+    { name: 'Naruto Shippuden Ultimate Ninja Storm 4', price: 900 },
+    { name: 'Outlast 2', price: 955 },
+    { name: 'God of War (2018)', price: 1000 },
+    { name: 'Final Fantasy XV', price: 1050 }
+];
+
+
+
+// Update the cart count display initially
+updateCartCount();
+
+// Function to add a game to the cart
+function addToCart(gameName) {
+    const isLoggedIn = checkLoginStatus(); // Check if the user is logged in
+    if (!isLoggedIn) {
+        alert("Please login to add items to your cart.");
+        return; // Exit the function if user is not logged in
+    }
+    
+    const game = games.find(g => g.name === gameName);
+    if (game) {
+        cart.push(game);
+        updateCartCount();
+        showNotification('Item added to cart');
+    }
+}
+// Function to update the cart count display
+function updateCartCount() {
+    document.getElementById('cart-count').innerText = cart.length;
+}
+
+
+        function showNotification(message) {
+            notification.innerText = message;
+            notification.classList.add('show');
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        function openCheckout() {
+    checkoutModal.style.display = 'block';
+    const cartContent = document.getElementById('checkoutCartContent');
+    cartContent.innerHTML = '';
+    
+    let total = 0;
+    cart.forEach(item => {
+        const div = document.createElement('div');
+        div.classList.add('cart-item');
+        div.innerHTML = `${item.name} - ₱${item.price} <button onclick="removeFromCart('${item.name}')">Remove</button>`;
+        cartContent.appendChild(div);
+        total += item.price;
+    });
+
+     const totalDiv = document.createElement('div');
+    totalDiv.innerHTML = `<strong>Total: ₱${total}</strong>`;
+    cartContent.appendChild(totalDiv);
+}
+
+        function removeFromCart(gameName) {
+    const index = cart.findIndex(item => item.name === gameName);
+    if (index !== -1) {
+        cart.splice(index, 1);
+        updateCartCount(); // Update the cart count
+        openCheckout(); // Update the checkout modal content after removing the item
+    }
+}
+
+
+         function clearCart() {
+    cart = [];
+    document.getElementById('cart-count').innerText = cart.length;
+    openCheckout(); // Update the checkout modal content after clearing the cart
+}
+
+       function proceedToPayment() {
+    const fullName = document.getElementById('fullName').value;
+    const phoneNumber = document.getElementById('phoneNumber').value;
+    const homeAddress = document.getElementById('homeAddress').value;
+
+    // Validate the input fields
+    if (!fullName || !phoneNumber || !homeAddress) {
+        alert("Please fill in all the required fields.");
+        return;
+    }
+
+    // Display the payment methods section
+    document.getElementById('paymentMethods').style.display = 'block';
+}
+
+function completePurchase() {
+    // Get the selected payment method
+    const paymentMethod = document.querySelector('input[name="payment"]:checked');
+
+    if (!paymentMethod) {
+        alert("Please select a payment method.");
+        return;
+    }
+
+    const selectedPaymentMethod = paymentMethod.value;
+
+    // Proceed with the payment based on the selected payment method
+    switch (selectedPaymentMethod) {
+        case 'credit':
+            // Handle credit card payment
+            alert("Processing Credit Card Payment...");
+            break;
+        case 'paypal':
+            // Handle PayPal payment
+            alert("Processing PayPal Payment...");
+            break;
+        case 'gcash':
+            // Handle GCash payment
+            alert("Processing GCash Payment...");
+            break;
+        default:
+            alert("Invalid payment method selected.");
+            break;
+    }
+
+    // Reset the cart and close the checkout modal
+    showNotification('Purchase Completed');
+    checkoutModal.style.display = 'none';
+    cart = [];
+    updateCartCount();
+}
+
+        function filterGames(category) {
+            const games = document.querySelectorAll('.game');
+            games.forEach(game => {
+                if (category === 'all' || game.getAttribute('data-category') === category) {
+                    game.style.display = 'block';
+                } else {
+                    game.style.display = 'none';
+                }
+            });
+            document.getElementById('categoryTitle').innerText = category.charAt(0).toUpperCase() + category.slice(1) + ' Games';
+        }
+
+        function showAllGames() {
+            const games = document.querySelectorAll('.game');
+            games.forEach(game => {
+                game.style.display = 'block';
+            });
+            document.getElementById('categoryTitle').innerText = 'Featured Games';
+        }
+
+        function showDetails(game) {
+            alert('Details for ' + game);
+        }
+		
+		function filterGames(category) {
+    const games = document.querySelectorAll('.game');
+    games.forEach(game => {
+        if (category === 'all' || game.getAttribute('data-category') === category) {
+            game.classList.remove('hidden');
+        } else {
+            game.classList.add('hidden');
+        }
+    });
+    document.getElementById('categoryTitle').innerText = category.charAt(0).toUpperCase() + category.slice(1) + ' Games';
+}
+
+function showAllGames() {
+    const games = document.querySelectorAll('.game');
+    games.forEach(game => {
+        game.classList.remove('hidden');
+    });
+    document.getElementById('categoryTitle').innerText = 'Featured Games';
+}
+
+// Function to handle login form submission
+function handleLoginForm(event) {
+    event.preventDefault(); // Prevent the default form submission
+    
+    // Get the username and password values from the form
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Here, you would typically send a request to your backend for authentication
+    // For demonstration purpose, let's assume the login is successful if both fields are filled
+    if (username && password) {
+        isLoggedIn = true; // Set isLoggedIn to true to indicate the user is logged in
+        alert("Login successful!");
+        loginModal.style.display = 'none'; // Close the login modal
+        updateLoginStatusMessage(); // Update the login status message
+    } else {
+        alert("Please enter both username and password.");
+    }
+}
+
+// Add event listener to the login form
+const loginForm = document.getElementById('loginForm');
+loginForm.addEventListener('submit', handleLoginForm);
+
+// Function to update the login status message
+function updateLoginStatusMessage() {
+    const loginBtn = document.getElementById('loginBtn');
+    if (isLoggedIn) {
+        loginBtn.innerText = 'Logout'; // Change the button text to "Logout"
+        loginBtn.removeEventListener('click', logoutUser); // Remove the existing click event listener
+        loginBtn.addEventListener('click', logoutUser); // Add a new click event listener for logout
+    } else {
+        loginBtn.innerText = 'Login'; // Change the button text to "Login"
+        loginBtn.removeEventListener('click', logoutUser); // Remove the existing click event listener
+        loginBtn.addEventListener('click', openLoginForm); // Add a new click event listener for login
+        // Hide the cart if the user is not logged in
+        document.getElementById('cart-count').innerText = '0';
+        document.getElementById('checkoutModal').style.display = 'none';
+    }
+}
+
+let isLoggedIn = false; // Initially, the user is not logged in
+
+// Function to check login status
+function checkLoginStatus() {
+    return isLoggedIn; // Return the value of isLoggedIn
+}
+
+// Function to simulate user login (example)
+function loginUser() {
+    // In a real application, you would perform actual login actions, such as sending a request to your backend
+    // For demonstration purpose, let's simulate a successful login after 2 seconds
+    setTimeout(() => {
+        isLoggedIn = true; // Set isLoggedIn to true to indicate the user is logged in
+        alert("Login successful!");
+    }, 2000);
+}
+
+ function logoutUser() {
+    isLoggedIn = false; // Set isLoggedIn to false to indicate the user is logged out
+    updateLoginStatusMessage(); // Update the login status message
+    // Additionally, you may perform any other necessary actions upon logout
+    alert("Logged out successfully!");
+    // Clear the cart upon logout
+    cart = [];
+    updateCartCount();
+}
+
+    </script>
+</body>
+</html>

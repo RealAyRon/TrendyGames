@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f3f3;
+    }
+	
+    .header {
+      background-color: #171a21;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      padding: 10px;
+    }
+
+    .navbar a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      background-color: #444; /* Solid color for the button */
+    }
+
+    .navbar a:hover {
+      background-color: #444; /* Keep the button color unchanged */
+      color: white;
+    }
+
+    /* Home icon */
+    .home-icon:before {
+      content: "\f015"; /* Unicode for home icon */
+      font-family: "Font Awesome 5 Free";
+      margin-right: 5px;
+    }
+
+    .game-info {
+  max-width: 1000px;
+  margin: 50px auto;
+  background-color: #000; /* Change the background color to black */
+  color: #fff; /* Change the text color to white */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ccc;
+}
+
+#game-description::before {
+  content: "";
+  display: block;
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+h1,
+p {
+  color: #fff; /* Change the text color of headings and paragraphs */
+}
+
+#game-pictures {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+#game-pictures img {
+  max-width: 300px; /* Set maximum width for images */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add space between images */
+  display: inline-block; /* Make images display in a row */
+}
+
+
+#game-icon {
+  max-width: 200px;
+  display: block;
+  margin: 20px auto;
+  margin-left: 50px;
+  border: 2px solid #333;
+}
+
+    #game-description::before {
+  content: "";
+  display: block;
+  border-top: 5px solid #ccc; /* Add a 1px solid border at the top with color #ccc */
+  margin-bottom: 20px; /* Add some spacing between the line and the text */
+}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Discover Trending Games</h1>
+    <p>Explore and enjoy the most played selection of games on our platform</p>
+  </div>
+  <div class="navbar">
+    <a href="ecom2.html" class="home-icon">Home</a> <!-- Add home icon class -->
+  </div>
+  <div class="game-info">
+      <img id="game-icon" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBQUFBcUFBQXGBcZGhoXGBgaGRcXFxgXGRkaGRoYGBkaICwjGhwpIBcZJDUkKC0vMjIyGiI6PTgxPCwxMi8BCwsLDw4PHRERHDEoIygxMTExMTExMTExNDExMTExMToxLzoxLzExMTExMTExMTExMTExMTExMTExMTExMTExMf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAQIEBQYDBwj/xABMEAACAQIDBAYECgcHAwMFAAABAgMAEQQSIQUxQVEGE2FxgZEiMqGxBxQjQlJicoLB0TNTkpOiwvAVQ1Sy0uHxFiRzNFVjFyVEZIP/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAtEQACAgICAQIFAwQDAAAAAAAAAQIRAyESMUEEURMiMoGxYXGRUqHB8BQVQv/aAAwDAQACEQMRAD8AtMDB8d2gib4cPctyaUWD+Wid7Pyr08mst0J2OMPEdNTZb7zZd5ud92La8dDWkoyZHOTbFjxLHFRXg7DdSMNKcKYzVLpIoVd1IdDTQaKlvQ6HlqjYvDrIjRtqrAg+PEdo3+FdQd/Zp7AfxpaG7DoyG03+ThYn5WGVUI4sVYRtblmDZh2NWmwcdgSeO7upk2zY2kWUr6Sm4NyASBYFhuYi+hO6ptRGFMtztUJRS2otVkCUUopbUAFJaltS0AJRSkVyjfUqd49qncfw7xQB0rzT4RIw+MjU8cM4PcZP9q9NtXl3SmXrNpSW3RRRxn7TEyH2EV1ejjeT7MxzP5Sm6CdMzgX+J4pj8XzERyG56lidx/8AiO/6t+R09kRwwDKQQRcEG4IO4gjeK+eOkuDyyBraOPaND7LVK6NdK8ZgAFiYSRb+pkuVHPq2GsfdqOynl9M7fEcMirZ9AWotXnWE+FrDEDrsNiI245Qki37CGB9lSx8KmA3hMTbiepsB3ktXL8OXVGtm7tRas50d6UjHelBh5REDZpZcqLcfNQAku3doOJvpWiBF7X1Gtuw/8VNAZ7pX0ZjxkfASKPRY7iN+ViNbX1B3g686xUG0pcK5hxgYBdBKRcqOHW23r/8AINOfM+sVWbZ2NHikyuLMPVcesv5jsNbYsssbtGWXFHLHjL+fYyfx+L9bF+8T86Kb/wDThfpQ/uv96K6v+c/Y4/8Aq8f9ZucMmVFHZXUb6SlFcB6Q5jTaKW1D2ISi1LaltQBCwMmZpeyQr5Rx1NtVD0WxIk+MuNxxDkd2VAD5Cr+1APTEtRanUUCEtRalrnO1lY8gT7KAOGzpMyX+s/8AmJ/GpZqg6JYvrIb8TYnvtZvapq/oB6YUUUUAFRMcCLOu9d/ap3ipdV22tqw4aIvO2VdwG9mJHqqN7Gmk26QXWw2ltWOCB8RI1kVc3aTwUfWJsLczXmGz1ds8sg+UldpX7Cx0XuAsKMZjJMW6vN6EUZzRQk7j+sl4F+zcL993nFxrvLN2IB7WawHhevUwQWGNye2c0+U38q0Nx2yPjKmNfXsWj4ekBex7CLjx7KxzQ2vmGULoxbTKRoQe2tl8fxJBEfVQg8QDJIR9Z2HuArH9IGkNhIxLCRixJ1YkXDHnx86uMlOeiljcVTK3EYuMfo1LH6TXVfAbz42rTfB/0ObaLmbEXGFRrWF161xvRLbkHFhrwHEjLJhmkaOJPXkdY0+05Cg+F719K7H2dHhoI4IxZI1CDttvY9pNye0msPVzcPkX3NIxS2ScPCkaqiKFRQFVVACqBoAANwrhtAMFzr6y6968Qezj4VMoIrzi0yLhcWHW49Yb14/1211hlDC4PYeYI3gjgeyqCRWjchTYg6Hs4d+lds7OesiISa3pKfUlA4Ht5Hf4UlIpxL6iqD+1cV/hT5mlpi4l3ai1LS0AJailpaAEtVZ0hxZiw8jD1iMifaf0R5Xv4VaVm+kPys0MAOi3lfs3qv8AP5ClJ0rHCPKSRH6DAIJ4x810PgyAfy1rKx3RpjHi5Iz8+MH70bZT7GvWxoi7iisyqbCiiimZhXLE+o32W9xrrTJBcEcwR7KAMZ0MxORlQ7pIwy/bCqWHl6X7VbasBsjBM+FjdDaRMpQ9qqtvbfvBI41d4Ta8+IGSFUR1A6x3N1VtR6CjVgbEgnSs4T1TN80N2jSUVRLsF31mxUrnkp6tfIV1To7hx81j2mST/VWmzGl7lpKGKkKQGtoSMwB5kXF/OsftHoMZ3MsmNmZ9wJSMqg5ItrKO6tKmyYh6vWL3Syj+auq4Qr6sjjvIf2uCfbTjJroWjzraPQeeP1MWrX3CSLQ24Fla48jVKNn4lJBFJD6bXyMrp1T2torOVs2oAU6m9erbQjfJdirWO8AqbHTdc34cqqdoP6WEYKCyysCdxyiGQG3blY+VNzkt2awl4MPG/pFCGSRSM0bqUde0g7x9YXB51U9KMNePPxB9x/ImvWts7EixShZAQy3ySKbSITxRuXMG4PEV530j2bNh43jxAzRsPk8QoshPBZF/u3/hPOtvT5+M05FTSlHXZn/g8w3WbUwwO5OskP3YyF/iYV9A14Z8Eo/+5i/+Hk888de50/VS5ZW/96OddBRRRXMMqdsw+q33T7x+NVdaLGx5kYcbXHeNazxFZz0zWDtHX43J9NqWuFFTyZVI1VFFFbGAUE0VyxLWRj9U+6gDrWW2W3WyzT8GbIv2F0HsAP3qt9vYrqsO7g2Nsq/ab0QfC9/CqTZcMhjVI/k0trIRd2/8ancLW9I+A41nlfSN8SpOX2OO2mEGIgxAIuGyutxmKMMrNbedPaBVtH0ow5NrSjt6tyO/0bm1R32LFZhlzFgQzMczm/HMdx7rVw2HjWQfF5CesgNh9eFtFI52uo/ZqccvA8kU0maeCdHUOjBlO4g3FdaapBFxuOtOrY5wooooAyXRqMdS8ZHqySRkdgYr+Fdm2OVYPC+R13ZhmBHFWtvU8vxpdjrlxGLj5SCQd0ih/exq6y1hx2dLkRsHtYFurlHVy/RJuGH0kb5y+0catAarsVg0kXK6hhvG8EHmpGqntFV3UYmDWNjKn0SVEg87LJ/Ce01qpe5k4p9Gjoqkwm3kY5GBDjehBRx3o2tu0aVZR41G+cB36e+qtEOLR0xKZkYdh86y0+Zroou4tNDwDMmjpfgWRyt/r9la0G+6sntG6WkX1oX6y3EqtxIvihbxtSY4umTcBjgVVhcxsLjSzJ2Eb+wjeDfuFoyKykEBlYWINipB5jcRVTtDBFLzwDOj+m8YtqTr1kd9xI3ruO/Q3J44PaGmaNrrxBuNeIIOqN2b+YrK+Lpm/FTVxIkXQyKCf41g26mWzLlIzxENa4yXBUGw3HThUw7exMJtisIxX9bhz1qd5Q2dB31Z4baKMct8rfRbS/2Tubw17BUyrT9mQ1v5kVmE6V4KT1cQgPJz1Z8ntTto9I8PElw4kc6JHGQ7ux3KoW/mdKh9I4MIqGSXDpI5IRFCjrJJG0VFYa3PPgATXHox0bjww6xlXrmuTa7LEp/u0J1sNxbee6jlLoOMavY07IxOLGbFzPEp3QQsFVRyeSxLtz4VCboo6tlgxsqWAJVrvlB3bmAG7lwrQbX2kYwqRgNK5yxrwufnN9Ubz3V32dgxElrlmJzO53sx3sfcBwAAqaTZSlKKv+EZ7/pbE/8AuEn7sf6qStbRRxQfEkd6WiitTnCo2PPycn2T7qk1E2mfkn7vxoBdmd6QTNK2HTcr+nl4mwADN4voOw37L5VtWZwzdZjF5Rxxp4gM5961qgKxe5M6HpJDQtUvSHZrtlnh/Sx8P1icUPPjbvPZVrjMSsUZkf1FsXP0UuAznsUansBrtI4Vc3Dnw7+6n1sV7K/o/tVJUWx37gd4beUPaN/dV5WDxsJztPh7G5vJGpHp2Nw6EaLIDqO3xvoOj23ExIKEjrFFyN2Zd2cDhyK8DzBBNQmpLROTG1svKKarg7jexse/lTqsyKKZOrxytwmiK/fibMPEq5/Zq1tUHpBCTGJFF3hYSqOJC3zr4oXHiKlxOGUMpurAMDzBFwfKpkjRPQ+1FqWipGRcXg45RlkRXHC4vY81O9T2iqqfYsi/oJ2HJJR1id2a4ceZq+pjuAQCbEmw7TYtYeAJ8KATMpNi8TBrLh2K/rIGzr3lTZh40kG3sPIf0gBO8PdT45tK1tVW1Nl4ZxeRF1KqGAAOZ2CL4ksBQpUVp9nTotODCY736ljGDe900aM34+gyjwNRtubGJvLAQkgGul1YDg6j1l7tV4HeDD2Bg/imKMQ9SVCRvsXjNxa+45WbTsrYVWpxIbcJaPP8Njc5MciZJVF2jJvp9ND89DwYdxsdKs4dpyILAhx9Fjr4NvHjfwqZt7o6k63AKspzKUOV0b6SNwPMbjWRbES4dgmJIZCbJOBlUngsq/3b9u41hKLizshKGRF9gsek2OXObFIj1SMALOzHrTa/rBVTwJI0rTMeF68/xcGcqwYo6G6utsykbv8Ajv51ebE6QiQiGfLHPw4JKB8+MnjzTeO0U4T8MnLira6F2PEzY2cysGaJVVT/AOT0swHD0QB51c7UxLRxOy2uozG97BRvOnIa1T7SvBio8VujcdTMfo3Pybn71lJ5VbzgMrIdzKVPiCPxpp0mjOW2m+tGP/6pl+m37CflRVX/AGLi+39lvyorHlI7eOL9D1ct6QHO/s/5p9QkkzTEcFUjx0vU2u08hhVbt98sDdrRjzkUVZVRdLpcmGJ+uh8mB/ChjXZQ9FSWllcWuzSEXvawKqN3YKlydNcLFI0WK6zDyLvV0ZlI4MjoCGU8Dp3A3FQuhzqked2CqEYszMFAuxNyx3bq82+EbpAuJlCxuWijzZWNzmJO8E65bAW53J10NYwdt/udOSP4Rq+kHwsRLmjw0HWqQVLyEqhB0NkAuw77VjNifCNjMIAkbI8Q9WOQM4Rfoo1wwA3C5NLgujCRQNi8YCcq51iuQLn1FcjUkkgW4X1vWaaIucwUAnU2GVR2KBoAK644W0c0p0erbM+EqDEEDFYZQf1kbekO0XAYeDVqcBsiKU9fh8ScwOZHsMyt9GQaZlINiCAbHfz8L2avVSByEkA9aNhdXXiL/NPJhqD5V7n0b2XH1ceIwcjCN1vkclgNdUPFSDcbyNDpWOTDKD5LZtDJGUWrr8EqfaEqEzKlpEAGJgJ0ZfmzRniBr6VtRodV0utnbUjnW8baj1lOjr3jl2jQ8DTcVhBJla+SRfUcalb71P0kPFTv7DYjMYjZuSVc3yVzZHUkKrHcEcG4Rj806qTaxWxpORKjGWno3NU2zE6svhzuQ5o+2JySo+6cy9wXnXCLEYyLR0E6j5ykK/loG8hT8Ri1kKOl1mS9o3GR3U+ugzaG9gQQSLqKdpkpNFrUSTGWvpoL6k23ca7wTK6hlNwRccD3EcCNxHCq7aeFhUGWd/k47uVPqE8Cw+eRwXmdxNqyny/8mkeN7JGDxvWaqpKfrPmH7N9WHaNO2sL0u6b4ePaGEg6wBIZWkxDi7BD1ckax+je5tI1wNxI7bUPSLpTjdpM0GCjlEXq2jBzuOcsg0jH1bjtvwqMN8EuOcAu0Mf1SzMw7DlW3kauNR+pkyTvSPVYOnWzHBIxkQsL+kWQ+AYC/cKzsXSsbT2hBhsKD8Whb4xLKQV6wx/owAdyByu/Unll1yMvwP4sD0Z4G7DnX+U1YdE+hGMw05EqFomHphJcsb29USAEB1F29EnjuO6hygumNQb7PTNtOB1MwI+TlRr/UY5G8MrmtHWX2lH/20isoT0G0BvuU24aa20q2i2lGmGSeV1RMiMzMQFFwOPfSxu7DLHqixqr2vsxZVb0Q1wQyEXVxxBHOoEXSSSYXwuEkkQ7pJCMPG3aue8jDtCU98ZtH9RhB2GeVj5iEW9tW2mtkRjJMyOIwMmGuY80sI3pq0kQ+rxkQfR9YDdelXCx4lLMQymzKQf4lYagjmKv8e+KZrrhFDfOJnURk81YLm81FUUXR/EnELJ1UcKEsZVjlLrISDY5CihWuQSw5VzSjT0d+PI2vm/wc3xWIwoKyyGXDkZS7qHMYOlphbVCNMwtbjzq32VtYKFRz8np1cl7gDgjty5N3Am+pmR7JfnbvYn3VXYjopluYZOrvclMuaI33/Jn1fukd1TsbeN6Zo7mish/01N/+t+zL+dFFsnhD3Nrso3d2PL3m/wCFWtVmxh6/3fxqzrsXR58uwrKdP3/7fL2g/wAaj861dYvpyS4KDfeNB3lr/jQ+h418xXbD2Lh8VCqzRo/ojKWFyp9I3UggjwNYKbY6ptMQMtkSQtl1Iyoudd+8XA3769B6HYkjNEwyvHa45qDofb7udS+kXRvrJ48XGbOhs4+nGVZG1+kFYEfYtxvXPjlUrfhnXP290JNsCGXCs2JfKrFWvpuVg3HeSQK872JsyCfHwRF88byS3jsQQkSlkDNuOfLuG4Dtr1LpVgml2ZMiXLCPOoG8mNhJlHaQtvGvEdkvJHImIiPpRsrg8L6kDtuLgjlevZwSc4tI82canb/Y9U6f9FsN8TkmiiSOSEBwY1CZkB9NWC6EZSSL7iO+8f4G9oF4MRh2OsTq4HJZQdB96Nj96uW2OlMuMwrQLh+raRcsjlrqovqFFr6247r1I+C/ZhikxT3uCkS311IMlxry/Gs54ZRxtyNK2j0CmyIrAqwDKdCCAQR2g06myPlBPKvOZsEcYUAC9huuSfC5okjVhZgGHIgEeRpInzKrWtcA2O8XFPpgcoMOiXCLlBNyBe1+JA3Dwqv2zsZMVlWUkxqblQSMx5EjcOfHhca3tqQ0mrBNp2iPhsNHEgSNFRBoFUAAeAoY11auRFRIuIygUpFIRUFlX0hktBJ3W8yB+NZ6KaLPhXxlxhkj+RLAmD4wHdWaU7lYKqZM2npG2tXfSlrQEc2RR3lh+VTeiahsOykAgSSqQdRbOTYjxq8e20ObqFljh8ZE4DRyI4O4qysPYaVpAN5HmKrMb0L2fKbthYgd+ZB1bX53S16r2+DjAfNjYd7yH+YVbjLwZRcPLf8ABcT7QiQek6jvNMjx8T7m8eHnuqqXoFhU9WGFvtoWP8WaoeK6NYdSQ2HjU/UHV37bxkXrOUZGieN9NmpDA7jfu1pGFY1ejeHGq9av2Z5h/PTn2Ow9TF4xP/7Fx5ODSodL3NdlorHf2Tif/ccV/B+VJRQ6XubjZA9Fj2/h/vVjUHZX6PvY/gKnV0ro432FYXpA+ZgfpTLbuBNvdW0xUmVGbkDbv4e2sPtzCdZkiJI+UsSN4yxvcjxFTJWi8bp2RZVZHWaMXkThu6xPnRnv4cjaths3FLIiuhupAIPYeY4EbrcLVi4JnBaOQXlUXGthKv0lJ48DyNTej+0kScxXIEgLhWBVlceuLHeGFm00urc65FcZbO7JFTjaNpE+Xhpyry/pN0OMMzT4ZM8LtmeIAl4mJuxjUesndqtyLW3elE0hHd767MWeWN2jjljUuzzDBh5DkjSSQ8lBNvtN837xFeidHtnmCEK1s7HO9tQGIACg8QFAHgTU0Ma6Ka2zesllXF6QcKOlBFFFcwgAooooAKaTUbG41Y7A6sfVXieZJ4Dtrhg9qLJI8VrMqq+huGViRcGw3EW8qVopQlXKtE5qaRTjTTUsaEtSEU6kNIZkem8jMIoUF2dywHYot/N7KtegiMMPIrHUTODx1AUHXjreqGKT4zjJJxqkfycZ4E8WHmx+8K03Q1fkHb6U0rfx2/Crxx8hmlUePsaCiiitTmCqrbS+p4/hVrVTtVrsByHv/oUpdDh2VDCm10ammsGjpTG0UtqKBmk2aPk18fealVGwH6Ne78TTsLJmUtzY27gbD3V0I5GMxhvlU7r5m+ynpe/L51lZfSYN2s3mCP5q0uPayyNyUIPvWze8eVZwigaI2OwYkUa5XU3RxvRvxB3EcRVHicYzIbjJiIGEmXgch1ZOaFb1pqi47Z8coAkXUeqwNnXuYe7dWeTHyWuzow5uLp9Gg2Zi1mjWRdzC/dzB7Ru8Kk2rI9HsR8UmOFdvk39KJz9LcVPAE++30q2Nqyj1T7LnSdrp9ABT1popwqkZtj6jPjo1fIzorfRYhSe6+/wrvemSRKwsyhhyIBHtqrJ15H56i4zHpGNTduCL6Tt2Ko18d3OkXZ0QNxGgPYoFd1jVb2UC++wFzU2yqRmYMFipnZ3VY8xuS5zEAeqqop1AHMrrc21q72bsyOEHLdnb13axdrbhoLBRwUWAqbekNCVFzySlrpeyFJpDSGiggKzvSbaLADCxH5WQan9XH85zyJ3Dx7Km7a2wsACqM8r6RxjeT9JuSDiapsBgymaSRs8shvI/M/RXko4f8WcY8mP6Vb+x1giSGMKuiopPkLkntO+tH0ZgKYWIHeVznvcl/wCas3jEL5YhvldY+5SbsfBQa26KAABuAsO4VsYNut+R1FFFBIVm9pTm0jjebhe8+ivtIq7x0mVDzOg8d/srNY1rvHH29Y3cm7+Ir5VMmXBHQrbQcNPKmkU80hFQ0aJjKKdailQ7L3EN1cQHGwUd5Gv4102YPk18feagbXkuwXkL+J/299T9nfo17j7zW3kwfRG2ubIBza/vJ9pqharnbb6qOQJ8/wDiqc0vJS6EpL6+FLTHb0gOf9fjVks44/BJMmRu9WG9TzFP2Vtx4SIcXpwSb5jcgx4HtPjzPRGuL+B7xoaHQMCrAEHeCLg94rOeO9rs1hlpcZK1+P2NIGvqNx1B4EU4GsjBDJD/AOnksu/q5LvH935yeFTk6SBP/URPF9dflY/2l1HiKydx7Rain9Lv8mhvReomExscozRyI4+qwNu8bx41JvTE1QtITRekbQXO7nQIWkqtxW3cJH+kxUCdjSxg+V71Afpps4f/AJcR+zmf/KDT4SfgOS9zQE1n9vdIlhIiiAeZiAF4KTuLee73DWs7t3p/E3yeGewO+Yq1lB+itrsRzt3A1TttbBR9UY3aRxMsksjIwZls1yM3aQbe+l8ObfTNIuCVt/Y1mAwJQmSRuslf15D/AJV5L/XZU2qNelmEP94f2bVLw+0BiSI8MSXc2zW0RfnOe4e8Vvx4qjndydsuej0HWSvMfUjvHH2uf0jD2L51pEe5NtwNr9vHy3d96rkKxBMLD6wXvyJxd+0ncOJPK9WUcYUADcP6ueZpEs6UUVExuIyiw9Y7uwc6BJWQsfNmaw3DTx4/12VS4Y52eTgxyp9hb6+JufKm7axmRCi+uwP3V3E+23jUpECgKNABYdwrNmyVIdS2oFKKEJjbUU+1FOhWLiHzO5+sw8ASB7qu9nfo18feazyNe5+sfab/AI1fbLPyY7z76ryS/pRWbUe7t2WHkPzvUJUJvYE23299SMUbsx7T7677LA9I8d1Y5puEbXZcUV8sTKfSFqg7QzAK6i5VxpxIb0bDt9IVrXiDCxGn9bqotoYO2aMnQg2PfuPePwpYczlqXZM1rRASUaOD6D215NuBPK+48iBUmoz4aRk66JQ+a/XQaC8g9FzEToGuD6J0bTcTeo+A2jGwIVrhdDcESRH6EqHVT2n/AHrq6Ii7RY0Vn9t9L8Lhrrm62Qf3cdjY/Wb1V7t/ZWH2l0xxeIuFbqUPzY75yPrSHX9nLWkcTkFm4262Ci9KSRYZBqpjbLL4Iup8vGsxgfhAxsRAVllTTSVdf2gQ2/iSaySqBc8TqSdSTzJOt66OLG1we0bjWkfTwXgrnJqmzRY/pvtGXfOIl5QoF/ibM3trP4qR5dZZJZTv+Ud3H8R0phNDAjTcdx4HuNaqKj0iTmkajcFHh+NLe3Dhx7eI/Ona+f4e6uTNamxg3fXCRvLnz7q7DENuNiOTKGHhfdXVNoOuqLEp5rGl/Mg1DseidsDozLiWBy5Ixqzt6IA53bRR2nwvur1LYE8MIGE2flaTRXltcJvOg5DU+l363FeRjF4rEER9ZIxJ0TNlXtJC2FuZtXuvQTouuBgAI+UYXY21F+HYd3kBwrnyX5ZVxS6L7Z2z0hUhblmN2djdnbmx/CptFMkcKLk6VkZ3Y2aUKtz/AMnlVBjsYFDSSGwGp/ACl2ttNUUvI2VRuH4Dma8V6Z9M2xTGOM2jFxp84dn4njw03pJydItLj2aTZ/Sn43jGjVPRcjK1wfQRl03aC58d9egM+oHO58Bb8xXkXwWwGTEtIRogAHebsf8AKvnXrMOrM3D1B93efMkfdpTSTpFJ2jsKdQq3paEhMSilopiImGOh76v9kH0COTH3Cs9hjqe6rjZb2zj6t/L/AJpy+oS3E4Lh2fXhff8A7U5YHQ5lIbmNxPhSQYgppvH9aipRmQi4Ye4+2vK9S8iu3r+xtGhI8UDu8uVcpo+se+5QPO+thXN4bjOljzy7/Ec6fCzKvqsT3bvOvPhmyLJW0u0aOMaJEGERAcq7zc9psBc+AHlXnfwpbQwkOVShkxRBIKOYjGhFvTdBmIO4ITY6nhW2lxrbhcc72v5cK8b6d9G5I3fEhnkR2uzMSzAn6R9nK261rV7HpsUm1OVr7mEmlpGSi31MRarke2td1x4HA17MZLyZE9GIvoNRbUA2uQbrfcdN/InnRaoHx76vt/2pVxt/m38f9qvkgLAc/HnTWYCuIlJG63jem07Ae73plqdau2Gwwc26xF+0WH4W9tJugIrH2f1+NOw2GklcRxqWY6ADgO3kK2+xOgkc1jJjYQvJXGb2/mK9Q6PdGsHhFHVBC2/OSpN+Y7e3f21jLKvBVV2UXwf9BxhVE04vMbEA/N8OHd4nWwHoFQZ9qwJ680Y++t/Ia1lNt/CRg4bhXzHs3+W/2Gudu2LbNnPiVXfv4DjWL6TdL4cOCXcFhoEB0B5abz2DXurzXpB8JU811hGRT847z7bnxPhWFxGIeRszsWbmfcOQ7BQoN9haRedJ+lc2Mc5iVTgvMdttw7PO9Z6ipezMEZpUjHzjqeSjVj5X9lbJKKFts9T+DPBGLCmW3pPqvazkBR5BPM1u4UyqF3248zxPidartlYUIqxgWWIajh1hG77q6ePZVsK5nt2avWhyG1B1pBSg1RIlqKdmNFAFBDtjDBh/3EP72P8AOp+H27hlYH4zDbUH5WPcRb6VeGV0raWNN2RF0qPbDtnDf4mH97H/AKqYdsYb/Ew/vY/9VeL0lT8Fe5XI9tg27h0NxiYf3sf51yHTrC9YY+tj00zGRMpPeDoO2vDsdLkXvqmLkm9Yy9Fjm+XX7aDm0fRuK2/hnIPXwA/+WPX21Fk2nhWBVp4CpFiDLGQR2614Lh8ay6HUVOjxiHsrWGBQjUehOVmg6XdG4VJlwk8LKdWjEsZI7tdf6vzOJOmlXgkX6Q86dBsaTEkiGJ5CurdWjyZeWbIDb8a1UaEUkaX3sAO+p8KxgesPMUQbDnd2SKKWRl9dEjd3T7aqLru42rrsaVMPi42xEBkWNx1kLLZjwylWG8Eg5TvIA41aoR0Qx/SX9ofnXQNH9JP2h+davYuFwe09tMDhjFAYyxhPyRLoqi7qh9G5N8oPAX3mk6LdFsLLtnE4SVC8EPXFELMPUdFUMwIJADnjwF6fNILMyrR/STzFKxjtoyDxFcNq7HZJ8WsSM0UE7RbwWAMrxxC29ycltAaaOj+MzpGcNKjyHLGJI3iDtYmwaQKNwJ38KLQ7OqsAbiRR2hgPxqUMcQLdd/GD+NbOfoJhtoQYPE7OQRJIwXELnZsi/PYZyfTQqy245gazXwgbOwqYxcJs+Bs0a5HCGSRpJDY5QtySVW17cSeVTyTBOipxOMzCzSX7M1/xquITmvsqT/01jLOWwssaxrndpEMKqvMtJlHcL3NU9Uq8A2TJSpFvR86gsLafjS0+TDsEEmmViQOdxf8AI0NWKznW96B4eKJeveSMSvYRqzoMovoWudBezHuUcTWFwsOY9g9p5VdRR21O/wB1ZzjaoqLrZ7ZhtpYVFCjEwm289bHck6lj6W8m5ruNsYX/ABMP72P/AFV4jS1CxIHI9u/tnC/4mH97H/qo/tnC/wCJh/ex/wCqvEaKPhIVnt39s4X/ABMP72P/AFUleI0UfCQWcFa4uK6rUGFijFG/rke41NWtWSh9FJS0FHLERZ1K+XfVCy2NjwrR1W7Tw3zx9786EJlaBTgKAKWrEKte17K2o2zujseJw6J1hIYlwSCzzFSzAEEnKABrwHKvFK3eN6WwSbEj2eFfr1YA6ehlWQyZs19bggW33qZq6A9K6VdKZMHDg54o4s+Kki626nUMgJsQQb7gCb2Aqr6Y4VBt7ZrhRmf1z9IxlspPaL7+wchWM6adMIcVhMFDCJFkhys5ZQArpGEAU/O1F78hWswvwl7NlEWIxWHcYuFSFsgf0iLMYnvYA/Wtb21nTQyRh1A6US2G/DgntOSMX9grQ7Gx+zX2jPHBGFxih+tfqypYBkDenuPpFe+vLdjdN4/7XfaOIVljkVowqjOY0yqqXHH1NbcWNL0b6XQQ7XxGNkVxFN1oWyhnUO6MpZQeScL2zUOLAv8AonBFHi9s7QdM74WXEGNeRzzMxHIkKFB4AtzqR0K6WSbWebA42ONkeJnUxqVy2ZQRqx3ZlKtvBXyyHR3psMLjsViDGz4fFSOzx+jnys7uh1OUsA7Ai9jmOtXuI6b7MwcUn9lYZlnlBBdlZVjv9tidL3CL6NxQ1+gFh8DDvHHj4s91idSvLPaRWYDt6tfIVA6H434lsjEbUCrJipJSuZ7m13VfSI1tmZnIFrkgcqo/g56XQYBMWs4cmVVKFRmzMocZWudCc41Om+ufQPphFhYpMHjIjLhZdWAAYoxADeiSLqbA6agi4vem07YGu2V0gk2xsvaEWJVQ0UYcOgKq1g0iXBJ1DRa9hFeMg16R0k6a4GLByYHZUJRJb9ZIwIup0YDOS7MQMt23Dd2eal6qCELTooi5sL2/rd210w2FZzqNKtoYQosKbYxMPAFH9aV2paKQBRRRQAUlFdGAtTA50UUUgK/avrL9k++pacKKKbJR0ooopFiimS+q3cfdRRQIz67qdRRViFpaKKYDhSmiikwHCloopDCmGiigBKDRRTEcK6Q7xS0UgLnDer412ooqShaKKKBBQaKKAEooooAKKKKAP//Z" alt="Game Icon">
+    <h1 id="game-name">Genshin Impact</h1>
+    <div id="game-pictures">
+        <img src="https://upload-os-bbs.hoyolab.com/upload/2022/02/17/140795126/8f636796a6d640b64048d80d76a1d68a_1519707325128456773.gif" alt="Game Picture 1">
+		<img src="https://i.ytimg.com/vi/737jmngcVOQ/maxresdefault.jpg" alt="Game Picture 3">
+        <img src="https://play-lh.googleusercontent.com/71h7kH0CoSpZMM29eVXElOku5quNzevSYKlJvrCWgxOtMbHdkpWUeJmoBhCC62m-02o=w526-h296-rw" alt="Game Picture 2">
+        <img src="https://www.zleague.gg/theportal/wp-content/uploads/2023/07/Genshin_Impact_Gameplay-1140x570.jpg" alt="Game Picture 3">
+		<img src="https://webstatic.hoyoverse.com/upload/op-public/2023/08/22/c29299a3798016b4e85d3c04ea7e8ad7_7930011754049764341.png" alt="Game Picture 3">
+    </div>
+    <p id="game-description">"Genshin Impact" invites players to embark on an epic journey across the enchanting world of Teyvat, a land brimming with magic, mystery, and adventure. As travelers from another world, players awaken to find themselves stranded in this wondrous realm, where they must unravel the secrets of the Seven and confront the tyranny of the gods.
+
+At its core, "Genshin Impact" is a captivating action RPG that seamlessly blends exploration, combat, and character progression into a rich and immersive experience. From the sprawling landscapes of Mondstadt to the bustling streets of Liyue Harbor, players are free to roam and discover the beauty and wonder of each region at their own pace.
+
+But Teyvat is not without its dangers. Ancient evils lurk in the shadows, threatening the peace and stability of the land. As players journey through the world, they'll encounter formidable adversaries, from hulking monsters to powerful bosses, each requiring skill, strategy, and teamwork to overcome.
+
+Central to the experience are the game's diverse roster of characters, each with their own unique abilities, personalities, and backstories. From the enigmatic traveler to the fiery-tempered Pyro user, players can assemble a party of companions to accompany them on their quest, forming bonds and forging alliances along the way.
+
+With its stunning visuals, dynamic combat system, and vast open-world environment, "Genshin Impact" offers an immersive gaming experience that captivates players from start to finish. Whether embarking on epic quests, uncovering hidden treasures, or simply basking in the beauty of Teyvat's landscapes, players are sure to be enchanted by the magic of this extraordinary world.</p>
+  </div>
+</body>
+</html>

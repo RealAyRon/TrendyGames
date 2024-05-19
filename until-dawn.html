@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f3f3;
+    }
+	
+    .header {
+      background-color: #171a21;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      padding: 10px;
+    }
+
+    .navbar a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      background-color: #444; /* Solid color for the button */
+    }
+
+    .navbar a:hover {
+      background-color: #444; /* Keep the button color unchanged */
+      color: white;
+    }
+
+    /* Home icon */
+    .home-icon:before {
+      content: "\f015"; /* Unicode for home icon */
+      font-family: "Font Awesome 5 Free";
+      margin-right: 5px;
+    }
+
+    .game-info {
+  max-width: 1000px;
+  margin: 50px auto;
+  background-color: #000; /* Change the background color to black */
+  color: #fff; /* Change the text color to white */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ccc;
+}
+
+#game-description::before {
+  content: "";
+  display: block;
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+h1,
+p {
+  color: #fff; /* Change the text color of headings and paragraphs */
+}
+
+#game-pictures {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+#game-pictures img {
+  max-width: 300px; /* Set maximum width for images */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add space between images */
+  display: inline-block; /* Make images display in a row */
+}
+
+
+#game-icon {
+  max-width: 200px;
+  display: block;
+  margin: 20px auto;
+  margin-left: 50px;
+  border: 2px solid #333;
+}
+
+    #game-description::before {
+  content: "";
+  display: block;
+  border-top: 5px solid #ccc; /* Add a 1px solid border at the top with color #ccc */
+  margin-bottom: 20px; /* Add some spacing between the line and the text */
+}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Discover Trending Games</h1>
+    <p>Explore and enjoy the most played selection of games on our platform</p>
+  </div>
+  <div class="navbar">
+    <a href="ecom2.html" class="home-icon">Home</a> <!-- Add home icon class -->
+  </div>
+  <div class="game-info">
+      <img id="game-icon" src="https://assets1.ignimgs.com/2019/01/22/until-dawn-button-fin-1548184846108.jpg?width=300&crop=1%3A1%2Csmart&auto=webp" alt="Game Icon">
+    <h1 id="game-name">Until Dawn</h1>
+    <div id="game-pictures">
+        <img src="https://64.media.tumblr.com/831a051edc879fd65e189cd9b8702b70/tumblr_pha7v3U6sW1vrquye_540.gif" alt="Game Picture 1">
+		<img src="https://i0.wp.com/thegamefanatics.com/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-11.44.49-AM.png?ssl=1" alt="Game Picture 3">
+        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2020/12/Until-Dawn-Jessica.jpg" alt="Game Picture 2">
+        <img src="https://publish.one37pm.net/wp-content/uploads/2020/07/gameslikeuntildawn-cat.jpg" alt="Game Picture 3">
+		<img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/until-dawn-logo.jpg" alt="Game Picture 3">
+    </div>
+    <p id="game-description">"Until Dawn" immerses players in a chilling interactive narrative that blurs the lines between horror movie tropes and gaming immersion. Set in the remote mountains of Western Canada, the game follows a group of eight friends who reunite at a secluded lodge one year after a tragic incident claimed the life of two of their friends.
+
+As players navigate the treacherous terrain of Blackwood Pines, they must make crucial decisions that shape the fate of each character, leading to branching storylines and multiple possible outcomes. From exploring darkened corridors to facing off against terrifying threats, every choice carries weight and consequence, driving the tension and suspense to new heights.
+
+But it's not just the supernatural forces lurking in the shadows that pose a threat; tensions among the group simmer beneath the surface, fueled by secrets, betrayals, and unresolved conflicts. As the night wears on and the horrors escalate, trust becomes a rare commodity, and players must navigate the intricate web of relationships to survive until dawn.
+
+With its cinematic presentation, gripping storytelling, and spine-tingling atmosphere, "Until Dawn" delivers a horror experience unlike any other, where the line between player and protagonist is blurred, and every decision could mean the difference between life and death. Prepare to embark on a harrowing journey into the heart of darkness, where the choices you make will determine who lives, who dies, and who will be left to face the dawn.</p>
+  </div>
+</body>
+</html>

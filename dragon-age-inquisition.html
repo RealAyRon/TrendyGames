@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f3f3;
+    }
+	
+    .header {
+      background-color: #171a21;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      padding: 10px;
+    }
+
+    .navbar a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      background-color: #444; /* Solid color for the button */
+    }
+
+    .navbar a:hover {
+      background-color: #444; /* Keep the button color unchanged */
+      color: white;
+    }
+
+    /* Home icon */
+    .home-icon:before {
+      content: "\f015"; /* Unicode for home icon */
+      font-family: "Font Awesome 5 Free";
+      margin-right: 5px;
+    }
+
+    .game-info {
+  max-width: 1000px;
+  margin: 50px auto;
+  background-color: #000; /* Change the background color to black */
+  color: #fff; /* Change the text color to white */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ccc;
+}
+
+#game-description::before {
+  content: "";
+  display: block;
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+h1,
+p {
+  color: #fff; /* Change the text color of headings and paragraphs */
+}
+
+#game-pictures {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+#game-pictures img {
+  max-width: 300px; /* Set maximum width for images */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add space between images */
+  display: inline-block; /* Make images display in a row */
+}
+
+
+#game-icon {
+  max-width: 200px;
+  display: block;
+  margin: 20px auto;
+  margin-left: 50px;
+  border: 2px solid #333;
+}
+
+    #game-description::before {
+  content: "";
+  display: block;
+  border-top: 5px solid #ccc; /* Add a 1px solid border at the top with color #ccc */
+  margin-bottom: 20px; /* Add some spacing between the line and the text */
+}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Discover Trending Games</h1>
+    <p>Explore and enjoy the most played selection of games on our platform</p>
+  </div>
+  <div class="navbar">
+    <a href="ecom2.html" class="home-icon">Home</a> <!-- Add home icon class -->
+  </div>
+  <div class="game-info">
+      <img id="game-icon" src="https://thumbnails.pcgamingwiki.com/2/22/Dragon_Age_Inquisition_cover.jpg/300px-Dragon_Age_Inquisition_cover.jpg" alt="Game Icon">
+    <h1 id="game-name">Dragon Age: Inquisition</h1>
+    <div id="game-pictures">
+        <img src="https://www.kotaku.com.au/wp-content/uploads/2014/11/12/vdnir75xafxza7gkccwj.gif?quality=75?quality=75" alt="Game Picture 1">
+		<img src="https://www.kotaku.com.au/wp-content/uploads/2015/08/14/1384111173535564687.gif?quality=75" alt="Game Picture 3">
+        <img src="https://www.thetimesherald.com/gcdn/-mm-/e87c541f765d0af7054f3904fc2efbcd34d42ffe/c=0-0-1920-1080/local/-/media/PortHuron/2014/11/26/B9315273567Z.1_20141126171242_000+G1Q98B64R.1-0.jpg" alt="Game Picture 2">
+        <img src="https://techcrunch.com/wp-content/uploads/2014/12/dragon-age-inquisition-61-1280x720.jpg" alt="Game Picture 3">
+		<img src="https://s1.dmcdn.net/v/7KqgU1SrCOcy9UpoL/x480" alt="Game Picture 3">
+    </div>
+    <p id="game-description">"Dragon Age: Inquisition" immerses players in a sprawling fantasy world ravaged by chaos and strife. As the Inquisitor, players must lead a diverse band of heroes to restore order and save the realm from impending doom.
+
+With its rich narrative, complex characters, and strategic combat, "Dragon Age: Inquisition" offers a gripping adventure that unfolds across diverse landscapes and challenges. From epic battles to intimate conversations, every decision shapes the fate of Thedas and its people.
+
+With its depth of storytelling, immersive world-building, and memorable characters, "Dragon Age: Inquisition" delivers an epic RPG experience that captivates players from start to finish.</p>
+  </div>
+</body>
+</html>
